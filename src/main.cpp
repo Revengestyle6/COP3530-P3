@@ -16,10 +16,11 @@ int main() {
     string command;
     cin >> no_of_lines;
     cin.ignore(); // ignore newline that first cin left over
-    for (int i = 0; i < no_of_lines; i++) {
-        getline(cin, command);
-
-        // parse your commands however you see fit
-        compass.ParseCommand(command);
+    for (int i = 0; i < no_of_lines; ++i) {
+        string line;
+        getline(cin, line);
+        compass.ParseCommand(line);
     }
+
+    return 0;
 }
